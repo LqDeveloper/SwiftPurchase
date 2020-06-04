@@ -40,7 +40,6 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
     /// 购买产品
     /// - Parameter payment: 购买配置
     func startPayment(_ payment: Payment) {
-        assertCompleteTransactionsWasCalled()
         let skPayment = SKMutablePayment(product: payment.product)
         skPayment.applicationUsername = payment.applicationUsername
         skPayment.quantity = payment.quantity
@@ -55,7 +54,6 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
     }
     
     func restorePurchases(_ restorePurchases: RestorePurchases) {
-        assertCompleteTransactionsWasCalled()
         if restoreController.restore != nil {
             return
         }
@@ -70,11 +68,6 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         }
         
         completeController.completeTransactions = completeTransactions
-    }
-    
-    func assertCompleteTransactionsWasCalled() {
-        let message = "completeTransactions() 在应用启动的时候回去调用"
-        assert(completeController.completeTransactions != nil, message)
     }
     
     func finishTransaction(_ transaction: SKPaymentTransaction) {
