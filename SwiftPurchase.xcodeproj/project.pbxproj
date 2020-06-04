@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,7 @@
 		517A81E22488875E0085D51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517A81E02488875E0085D51B /* LaunchScreen.storyboard */; };
 		517A81ED2488875E0085D51B /* SwiftPurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81EC2488875E0085D51B /* SwiftPurchaseTests.swift */; };
 		517A81F82488875E0085D51B /* SwiftPurchaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81F72488875E0085D51B /* SwiftPurchaseUITests.swift */; };
-		517A821C2488876A0085D51B /* PurchaseManager+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82062488876A0085D51B /* PurchaseManager+RxSwift.swift */; };
+		517A821C2488876A0085D51B /* SwiftPurchase+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */; };
 		517A821D2488876A0085D51B /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82092488876A0085D51B /* ReceiptController.swift */; };
 		517A821E2488876A0085D51B /* AppleReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820A2488876A0085D51B /* AppleReceiptRequest.swift */; };
 		517A821F2488876A0085D51B /* AppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820B2488876A0085D51B /* AppReceiptVerificator.swift */; };
@@ -32,7 +32,7 @@
 		517A82292488876A0085D51B /* SKProductExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82182488876A0085D51B /* SKProductExtensions.swift */; };
 		517A822A2488876A0085D51B /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82192488876A0085D51B /* ResultExtensions.swift */; };
 		517A822B2488876A0085D51B /* SKErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A821A2488876A0085D51B /* SKErrorExtensions.swift */; };
-		517A822C2488876A0085D51B /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A821B2488876A0085D51B /* PurchaseManager.swift */; };
+		517A822C2488876A0085D51B /* SwiftPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A821B2488876A0085D51B /* SwiftPurchase.swift */; };
 		8F81C6F9A911C3006B1A2223 /* Pods_SwiftPurchase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781C48A678A708A7D7B886E4 /* Pods_SwiftPurchase.framework */; };
 		91586AB4EECE17D9BA20B9D2 /* Pods_SwiftPurchaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD16650341AE49894FEC98D /* Pods_SwiftPurchaseTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,7 +71,7 @@
 		517A81F32488875E0085D51B /* SwiftPurchaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPurchaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		517A81F72488875E0085D51B /* SwiftPurchaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPurchaseUITests.swift; sourceTree = "<group>"; };
 		517A81F92488875E0085D51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		517A82062488876A0085D51B /* PurchaseManager+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PurchaseManager+RxSwift.swift"; sourceTree = "<group>"; };
+		517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftPurchase+RxSwift.swift"; sourceTree = "<group>"; };
 		517A82092488876A0085D51B /* ReceiptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
 		517A820A2488876A0085D51B /* AppleReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptRequest.swift; sourceTree = "<group>"; };
 		517A820B2488876A0085D51B /* AppReceiptVerificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReceiptVerificator.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		517A82182488876A0085D51B /* SKProductExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductExtensions.swift; sourceTree = "<group>"; };
 		517A82192488876A0085D51B /* ResultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
 		517A821A2488876A0085D51B /* SKErrorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKErrorExtensions.swift; sourceTree = "<group>"; };
-		517A821B2488876A0085D51B /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		517A821B2488876A0085D51B /* SwiftPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPurchase.swift; sourceTree = "<group>"; };
 		557B81A3E76281218E2764D2 /* Pods-SwiftPurchase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchase.release.xcconfig"; path = "Target Support Files/Pods-SwiftPurchase/Pods-SwiftPurchase.release.xcconfig"; sourceTree = "<group>"; };
 		781C48A678A708A7D7B886E4 /* Pods_SwiftPurchase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPurchase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A64440D41F2FD8386D4BAC52 /* Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftPurchase-SwiftPurchaseUITests/Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 				FF052D0FDE01D6F936EA2952 /* Pods-SwiftPurchaseUITests.debug.xcconfig */,
 				42BEA2068F524D268A7364D0 /* Pods-SwiftPurchaseUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -212,7 +211,7 @@
 		517A82052488876A0085D51B /* RxSwiftExtensions */ = {
 			isa = PBXGroup;
 			children = (
-				517A82062488876A0085D51B /* PurchaseManager+RxSwift.swift */,
+				517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */,
 			);
 			path = RxSwiftExtensions;
 			sourceTree = "<group>";
@@ -224,7 +223,7 @@
 				517A820D2488876A0085D51B /* Purchase */,
 				517A82132488876A0085D51B /* ProductInfo */,
 				517A82172488876A0085D51B /* Tool */,
-				517A821B2488876A0085D51B /* PurchaseManager.swift */,
+				517A821B2488876A0085D51B /* SwiftPurchase.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -496,7 +495,7 @@
 				517A82282488876A0085D51B /* AppleProductRequest.swift in Sources */,
 				517A821D2488876A0085D51B /* ReceiptController.swift in Sources */,
 				517A82262488876A0085D51B /* ProductsInfoController.swift in Sources */,
-				517A821C2488876A0085D51B /* PurchaseManager+RxSwift.swift in Sources */,
+				517A821C2488876A0085D51B /* SwiftPurchase+RxSwift.swift in Sources */,
 				517A82222488876A0085D51B /* PurchaseController.swift in Sources */,
 				517A822B2488876A0085D51B /* SKErrorExtensions.swift in Sources */,
 				517A82202488876A0085D51B /* AppleReceiptValidator.swift in Sources */,
@@ -507,7 +506,7 @@
 				517A82212488876A0085D51B /* RestoreController.swift in Sources */,
 				517A821F2488876A0085D51B /* AppReceiptVerificator.swift in Sources */,
 				517A81D62488875D0085D51B /* AppDelegate.swift in Sources */,
-				517A822C2488876A0085D51B /* PurchaseManager.swift in Sources */,
+				517A822C2488876A0085D51B /* SwiftPurchase.swift in Sources */,
 				517A81D82488875D0085D51B /* SceneDelegate.swift in Sources */,
 				517A82272488876A0085D51B /* AppProductInfo.swift in Sources */,
 				517A821E2488876A0085D51B /* AppleReceiptRequest.swift in Sources */,

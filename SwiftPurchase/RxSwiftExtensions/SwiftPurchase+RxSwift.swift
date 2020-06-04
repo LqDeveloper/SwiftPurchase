@@ -9,9 +9,9 @@
 import RxSwift
 import RxCocoa
 import StoreKit
-extension PurchaseManager:ReactiveCompatible{}
+extension SwiftPurchase:ReactiveCompatible{}
 //获取产品
-public extension Reactive where Base == PurchaseManager{
+public extension Reactive where Base == SwiftPurchase{
     static func requestInfoWithSingle(_ productIds: [String]) -> Single<ProductInfo>{
         return Single.create { (single) -> Disposable in
             Base.requestProductsInfo(productIds) { (result) in
@@ -41,7 +41,7 @@ public extension Reactive where Base == PurchaseManager{
 }
 
 //刷新和获取Receipt
-public extension Reactive where Base == PurchaseManager {
+public extension Reactive where Base == SwiftPurchase {
     static func fetchReceiptWithSingle(forceRefresh: Bool = false) -> Single<Data?>{
         return Single.create { (single) -> Disposable in
             Base.fetchReceipt(forceRefresh: forceRefresh) { (result) in
@@ -102,7 +102,7 @@ public extension Reactive where Base == PurchaseManager {
 
 
 //购买
-public extension Reactive where Base == PurchaseManager {
+public extension Reactive where Base == SwiftPurchase {
     static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = true, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Single<PurchaseSuccess>{
         return Single.create { (single) -> Disposable in
             Base.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox) { (result) in
@@ -130,7 +130,7 @@ public extension Reactive where Base == PurchaseManager {
 
 
 //恢复
-public extension Reactive where Base == PurchaseManager {
+public extension Reactive where Base == SwiftPurchase {
     static func restoreWithSingle(atomically: Bool = true, applicationUsername: String = "") -> Single<[RestoreResult]>{
         return Single.create { (single) -> Disposable in
             Base.restorePurchases(atomically: atomically, applicationUsername: applicationUsername) { (result) in
@@ -152,7 +152,7 @@ public extension Reactive where Base == PurchaseManager {
 
 
 //完成
-public extension Reactive where Base == PurchaseManager {
+public extension Reactive where Base == SwiftPurchase {
     static func completeWithSingle(atomically: Bool = true) -> Single<[Purchase]>{
         return Single.create { (single) -> Disposable in
             Base.completeTransactions(atomically: atomically) { (result) in

@@ -8,12 +8,12 @@
 
 import StoreKit
 
-public class PurchaseManager{
+public class SwiftPurchase{
     private var productInfo:AppProductInfo
     private var receiptVerificator:AppReceiptVerificator
     private var purchaseController:AppPurchase
     
-    public static let shared = PurchaseManager()
+    public static let shared = SwiftPurchase()
     public static var canMakePayments: Bool {
         return SKPaymentQueue.canMakePayments()
     }
@@ -26,7 +26,7 @@ public class PurchaseManager{
 }
 
 //获取产品列表
-public extension PurchaseManager{
+public extension SwiftPurchase{
     static func requestProductsInfo(_ productIds: [String], completion: @escaping AppProductRequestCallback){
         shared.productInfo.requestProductsInfo(Set(productIds), completion: completion)
     }
@@ -41,7 +41,7 @@ public extension PurchaseManager{
 }
 
 //receipt的获取和验证
-public extension PurchaseManager{
+public extension SwiftPurchase{
     static var receiptData:Data?{
         return shared.receiptVerificator.receiptData
     }
@@ -61,11 +61,11 @@ public extension PurchaseManager{
 }
 
 //购买产品
-public extension PurchaseManager{
+public extension SwiftPurchase{
     static func purchaseProduct(_ productId: String, quantity: Int = 1, atomically: Bool = true, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping (PurchaseResult) -> Void) {
         requestProductsInfo([productId]) {(result) in
             if let product = result.products.first {
-                PurchaseManager.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, completion: completion)
+                SwiftPurchase.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, completion: completion)
             }else if let error = result.error{
                 completion(.failure(error))
             }else if let invalidProductId = result.invalidProductIDs.first {
@@ -89,21 +89,21 @@ public extension PurchaseManager{
 }
 
 //恢复产品
-public extension PurchaseManager{
+public extension SwiftPurchase{
     static func restorePurchases(atomically: Bool = true, applicationUsername: String = "", completion: @escaping RestoreCallback) {
         shared.purchaseController.restorePurchases(RestorePurchases.init(atomically: atomically, applicationUsername: applicationUsername, callback: completion))
     }
 }
 
 //应用启动的时候处理没有finish的订单
-public extension PurchaseManager{
+public extension SwiftPurchase{
     static func completeTransactions(atomically: Bool = true, completion: @escaping CompleteCallback) {
         shared.purchaseController.completeTransactions(CompletePruchase(atomically: atomically, callback: completion))
     }
 }
 
 //下载产品
-public extension PurchaseManager{
+public extension SwiftPurchase{
     static var shouldAddStorePaymentHandler: ShouldAddStorePaymentHandler? {
         didSet {
             shared.purchaseController.shouldAddStorePaymentHandler = shouldAddStorePaymentHandler
