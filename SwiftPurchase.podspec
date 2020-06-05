@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SwiftPurchase"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "SwiftPurchase 是针对iOS内购写的一个工具类"
   spec.description  = <<-DESC
                          包含了获取产品列表，购买，restore，获取验证receipt

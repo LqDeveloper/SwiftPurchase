@@ -40,6 +40,7 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
     /// 购买产品
     /// - Parameter payment: 购买配置
     func startPayment(_ payment: Payment) {
+        assertCompleteTransactionsWasCalled()
         let skPayment = SKMutablePayment(product: payment.product)
         skPayment.applicationUsername = payment.applicationUsername
         skPayment.quantity = payment.quantity
@@ -54,6 +55,7 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
     }
     
     func restorePurchases(_ restorePurchases: RestorePurchases) {
+        assertCompleteTransactionsWasCalled()
         if restoreController.restore != nil {
             return
         }
@@ -69,6 +71,13 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         
         completeController.completeTransactions = completeTransactions
     }
+    
+    func assertCompleteTransactionsWasCalled() {
+        let message = "completeTransactions() 在应用启动的时候回去调用"
+        assert(completeController.completeTransactions != nil, message)
+    }
+    
+
     
     func finishTransaction(_ transaction: SKPaymentTransaction) {
         paymentQueue.finishTransaction(transaction)
@@ -100,8 +109,8 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
             //下面completeController处理的都是没有处理过（没用finish掉的）的，
             unhandled = completeController.handleTransactions(unhandled, paymentQueue)
             if unhandled.count > 0 {
-                let strings = unhandled.map { $0.debugDescription }.joined(separator: "\n")
-                print("unhandledTransactions:\n\(strings)")
+                let strings = unhandled.map { $0.payment.productIdentifier }.joined(separator: "\n")
+                print("没有处理的订单:\n\(strings)")
             }
         }
     }
