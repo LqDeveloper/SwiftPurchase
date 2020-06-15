@@ -103,7 +103,7 @@ public extension Reactive where Base == SwiftPurchase {
 
 //购买
 public extension Reactive where Base == SwiftPurchase {
-    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = true, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Single<PurchaseSuccess>{
+    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Single<PaymentSuccess>{
         return Single.create { (single) -> Disposable in
             Base.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox) { (result) in
                 switch result{
@@ -118,7 +118,7 @@ public extension Reactive where Base == SwiftPurchase {
     }
     
     
-    static func purchaseWithDriver(_ product: SKProduct, quantity: Int = 1, atomically: Bool = true, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Driver<PurchaseResult>{
+    static func purchaseWithDriver(_ product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Driver<PaymentResult>{
         return Single.create { (single) -> Disposable in
             Base.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox) { (result) in
                 single(.success(result))
@@ -141,12 +141,7 @@ public extension Reactive where Base == SwiftPurchase {
     }
     
     static func restoreWithDriver(atomically: Bool = true, applicationUsername: String = "") -> Driver<[RestoreResult]>{
-        return Single.create { (single) -> Disposable in
-            Base.restorePurchases(atomically: atomically, applicationUsername: applicationUsername) { (result) in
-                single(.success(result))
-            }
-            return Disposables.create {}
-        }.asDriver(onErrorJustReturn: [])
+        return restoreWithSingle(atomically: atomically, applicationUsername: applicationUsername).asDriver(onErrorJustReturn: [])
     }
 }
 
@@ -163,11 +158,6 @@ public extension Reactive where Base == SwiftPurchase {
     }
     
     static func completeWithDriver(atomically: Bool = true) -> Driver<[Purchase]>{
-        return Single.create { (single) -> Disposable in
-            Base.completeTransactions(atomically: atomically) { (result) in
-                single(.success(result))
-            }
-            return Disposables.create {}
-        }.asDriver(onErrorJustReturn: [])
+        return completeWithSingle(atomically: atomically).asDriver(onErrorJustReturn: [])
     }
 }

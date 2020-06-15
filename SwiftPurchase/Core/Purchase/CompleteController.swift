@@ -52,7 +52,7 @@ class CompleteController: TransactionHandle {
             return transactions
         }
         
-        var unhandledTransactions: [SKPaymentTransaction] = []
+        var unhandle: [SKPaymentTransaction] = []
         var purchases: [Purchase] = []
         
         for transaction in transactions {
@@ -61,21 +61,21 @@ class CompleteController: TransactionHandle {
             
             if transactionState != .purchasing {
                 
-                let willFinishTransaction = completeTransactions.atomically || transactionState == .failed
-                let purchase = Purchase.init(transaction: transaction, needFinish: !willFinishTransaction)
+                let shouldFinish = completeTransactions.atomically || transactionState == .failed
+                let purchase = Purchase.init(transaction: transaction, needFinish: !shouldFinish)
                 purchases.append(purchase)
                 
-                if willFinishTransaction {
-                    print("Finishing transaction for payment \"\(transaction.payment.productIdentifier)\" with state: \(transactionState)")
+                if shouldFinish {
+                    print("Finish订单 产品ID \(transaction.payment.productIdentifier) 订单状态: \(transactionState)")
                     paymentQueue.finishTransaction(transaction)
                 }
             } else {
-                unhandledTransactions.append(transaction)
+                unhandle.append(transaction)
             }
         }
         if purchases.count > 0 {
             completeTransactions.callback(purchases)
         }
-        return unhandledTransactions
+        return unhandle
     }
 }

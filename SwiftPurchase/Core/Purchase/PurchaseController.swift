@@ -65,7 +65,7 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
     
     func completeTransactions(_ completeTransactions: CompletePruchase) {
         guard completeController.completeTransactions == nil else {
-            print("completeTransactions() 在应用启动的时候回去调用")
+            print("completeTransactions() 已经设置过了")
             return
         }
         
@@ -77,7 +77,7 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         assert(completeController.completeTransactions != nil, message)
     }
     
-
+    
     
     func finishTransaction(_ transaction: SKPaymentTransaction) {
         paymentQueue.finishTransaction(transaction)
@@ -103,14 +103,16 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         var unhandled = transactions.filter { $0.transactionState != .purchasing }
         if unhandled.count > 0 {
             //如果不是通过这次启动APP购买的（paymentsController的payments没用这个Payment）不会处理
-            unhandled = paymentsController.handleTransactions(transactions, paymentQueue)
+            unhandled = paymentsController.handleTransactions(transactions, queue)
             //如果不是通过这次启动APP点击restore（restoreController的restore为nil）的不会处理
-            unhandled = restoreController.handleTransactions(unhandled, paymentQueue)
+            unhandled = restoreController.handleTransactions(unhandled, queue)
             //下面completeController处理的都是没有处理过（没用finish掉的）的，
-            unhandled = completeController.handleTransactions(unhandled, paymentQueue)
+            unhandled = completeController.handleTransactions(unhandled, queue)
             if unhandled.count > 0 {
-                let strings = unhandled.map { $0.payment.productIdentifier }.joined(separator: "\n")
-                print("没有处理的订单:\n\(strings)")
+                for trans in unhandled {
+                    print("没有处理的订单 产品ID:\(trans.payment.productIdentifier) 订单状态:\(trans.transactionState)")
+                }
+                
             }
         }
     }

@@ -12,7 +12,7 @@ public protocol PurchaseTransaction{
     var transaction:SKPaymentTransaction {set get}
 }
 
-public struct PurchaseSuccess:PurchaseTransaction {
+public struct PaymentSuccess:PurchaseTransaction {
     public let product:SKProduct
     public var transaction:SKPaymentTransaction
     public let needFinish:Bool
@@ -23,9 +23,9 @@ public struct Purchase :PurchaseTransaction{
     public let needFinish:Bool
 }
 
-public typealias PurchaseResult = Result<PurchaseSuccess,SKError>
+public typealias PaymentResult = Result<PaymentSuccess,SKError>
 
-public typealias PurchaseCallback = (PurchaseResult) -> Void
+public typealias PaymentCallback = (PaymentResult) -> Void
 
 public typealias RestoreResult = Result<Purchase,SKError>
 

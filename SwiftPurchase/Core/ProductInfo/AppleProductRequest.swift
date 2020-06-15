@@ -16,9 +16,9 @@ protocol ProductInfoRequest {
 class AppleProductRequest: NSObject,ProductInfoRequest,SKProductsRequestDelegate {
     
     private var request:SKProductsRequest?
-    private let callback: AppProductRequestCallback
+    private let callback: ProductRequestCallback
     
-    init(productIds: Set<String>, callback: @escaping AppProductRequestCallback) {
+    init(productIds: Set<String>, callback: @escaping ProductRequestCallback) {
         self.request = SKProductsRequest.init(productIdentifiers: productIds)
         self.callback = callback
         super.init()
@@ -26,6 +26,7 @@ class AppleProductRequest: NSObject,ProductInfoRequest,SKProductsRequestDelegate
     }
     
     deinit {
+        request?.cancel()
         request?.delegate = nil
         request = nil
     }

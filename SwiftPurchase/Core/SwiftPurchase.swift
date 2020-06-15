@@ -27,7 +27,7 @@ public class SwiftPurchase{
 
 //获取产品列表
 public extension SwiftPurchase{
-    static func requestProductsInfo(_ productIds: [String], completion: @escaping AppProductRequestCallback){
+    static func requestProductsInfo(_ productIds: [String], completion: @escaping ProductRequestCallback){
         shared.productInfo.requestProductsInfo(Set(productIds), completion: completion)
     }
     
@@ -62,7 +62,7 @@ public extension SwiftPurchase{
 
 //购买产品
 public extension SwiftPurchase{
-    static func purchaseProduct(_ productId: String, quantity: Int = 1, atomically: Bool = true, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping (PurchaseResult) -> Void) {
+    static func purchaseProduct(_ productId: String, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping (PaymentResult) -> Void) {
         requestProductsInfo([productId]) {(result) in
             if let product = result.products.first {
                 SwiftPurchase.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, completion: completion)
@@ -79,7 +79,7 @@ public extension SwiftPurchase{
         }
     }
     
-    static func purchaseProduct(_ product: SKProduct, quantity: Int = 1, atomically: Bool = true, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping PurchaseCallback) {
+    static func purchaseProduct(_ product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping PaymentCallback) {
         shared.purchaseController.startPayment(Payment.init(product: product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, callback: completion))
     }
     

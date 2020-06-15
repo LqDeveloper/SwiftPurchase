@@ -14,11 +14,11 @@ public typealias ProductInfo = (products:[SKProduct],invalidProductIDs:[String])
 public typealias ProductInfoReuslt = Result<ProductInfo,SKError>
 
 ///请求产品回调
-public typealias AppProductRequestCallback = (ProductInfoReuslt) -> Void
+public typealias ProductRequestCallback = (ProductInfoReuslt) -> Void
 
 /// 请求产品需要实现的协议，通过实现这个协议，自定义请求方法
 public protocol AppProductInfo{
-    func requestProductsInfo(_ productIds: Set<String>, completion: @escaping AppProductRequestCallback)
+    func requestProductsInfo(_ productIds: Set<String>, completion: @escaping ProductRequestCallback)
     func cancle(_ productIds: Set<String>)
     func cancleAll()
 }

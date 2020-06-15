@@ -14,7 +14,7 @@ public struct Payment: Hashable {
     let atomically: Bool
     let applicationUsername: String
     let simulatesAskToBuyInSandbox: Bool
-    let callback: PurchaseCallback
+    let callback: PaymentCallback
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(product)
@@ -65,7 +65,7 @@ class PaymentsController:TransactionHandle {
         let transactionState = transaction.transactionState
         
         if transactionState == .purchased {
-            payment.callback(.success(PurchaseSuccess.init(product:payment.product,transaction: transaction, needFinish: !payment.atomically)))
+            payment.callback(.success(PaymentSuccess.init(product:payment.product,transaction: transaction, needFinish: !payment.atomically)))
             
             if payment.atomically {
                 paymentQueue.finishTransaction(transaction)

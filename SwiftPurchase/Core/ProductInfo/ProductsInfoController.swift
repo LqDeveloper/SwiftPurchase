@@ -12,7 +12,7 @@ class ProductsInfoController :AppProductInfo{
     //用来使每个请求和回调一一对应
     private struct AppProductQuery {
         let request: ProductInfoRequest
-        var completionHandlers: [AppProductRequestCallback]
+        var completionHandlers: [ProductRequestCallback]
     }
     ///使用Set<String>为key保存请求
     private var requestDic: [Set<String>: AppProductQuery] = [:]
@@ -22,7 +22,7 @@ class ProductsInfoController :AppProductInfo{
     /// - Parameters:
     ///   - productIds: 产品ID
     ///   - completion: 回调
-    func requestProductsInfo(_ productIds: Set<String>, completion: @escaping AppProductRequestCallback) {
+    func requestProductsInfo(_ productIds: Set<String>, completion: @escaping ProductRequestCallback) {
         guard requestDic[productIds] == nil else {
             requestDic[productIds]!.completionHandlers.append(completion)
             return

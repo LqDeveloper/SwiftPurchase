@@ -64,20 +64,20 @@ class RestoreController: TransactionHandle {
             return transactions
         }
         
-        var unhandledTransactions: [SKPaymentTransaction] = []
+        var unhandle: [SKPaymentTransaction] = []
         for transaction in transactions {
             if let restoredPurchase = handleTransaction(transaction, atomically: restorePurchases.atomically, on: paymentQueue) {
                 restoredResults.append(.success(restoredPurchase))
             } else {
-                unhandledTransactions.append(transaction)
+                unhandle.append(transaction)
             }
         }
-        return unhandledTransactions
+        return unhandle
     }
     
     func restoreCompletedTransactionsFailed(withError error: Error) {
         guard let restorePurchases = restore else {
-            print("Callback already called. Returning")
+            print("restore已经处理过了")
             return
         }
         restoredResults.append(.failure(SKError(_nsError: error as NSError)))
@@ -89,7 +89,7 @@ class RestoreController: TransactionHandle {
     
     func restoreCompletedTransactionsFinished() {
         guard let restorePurchases = restore else {
-            print("Callback already called. Returning")
+            print("restore已经处理过了")
             return
         }
         restorePurchases.callback(restoredResults)

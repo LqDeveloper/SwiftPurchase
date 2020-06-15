@@ -23,6 +23,7 @@ class AppleReceiptRequest: NSObject, SKRequestDelegate {
     }
     
     deinit {
+        request?.cancel()
         request?.delegate = nil
         request = nil
     }
