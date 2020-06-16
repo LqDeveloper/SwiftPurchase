@@ -12,6 +12,37 @@ public protocol PurchaseTransaction{
     var transaction:SKPaymentTransaction {set get}
 }
 
+public extension PurchaseTransaction{
+    var original: SKPaymentTransaction? {
+        return transaction.original
+    }
+    
+    var error: Error? {
+        return transaction.error
+    }
+    
+    var productIdentifier: String {
+        return transaction.payment.productIdentifier
+    }
+    
+    var applicationUsername: String? {
+        return transaction.payment.applicationUsername
+    }
+    
+    var transactionDate: Date? {
+        return transaction.transactionDate
+    }
+    
+    var transactionIdentifier: String? {
+        return transaction.transactionIdentifier
+    }
+    
+    var transactionState: SKPaymentTransactionState {
+        return transaction.transactionState
+    }
+}
+
+
 public struct PaymentSuccess:PurchaseTransaction {
     public let product:SKProduct
     public var transaction:SKPaymentTransaction
