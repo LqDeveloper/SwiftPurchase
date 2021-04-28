@@ -40,8 +40,8 @@ public extension Result where Success == Data?{
 }
 
 
-public extension Result where Success == PaymentSuccess{
-    var paySuccess:PaymentSuccess?{
+public extension Result where Success == PaymentInfo{
+    var paySuccess:PaymentInfo?{
         switch self {
         case .success(let result):
             return result

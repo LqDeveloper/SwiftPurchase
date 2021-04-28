@@ -43,10 +43,16 @@ public extension PurchaseTransaction{
 }
 
 
-public struct PaymentSuccess:PurchaseTransaction {
+public struct PaymentInfo:PurchaseTransaction {
     public let product:SKProduct
     public var transaction:SKPaymentTransaction
     public let needFinish:Bool
+}
+
+public struct PaymentFailure:Error,PurchaseTransaction{
+    public let product:SKProduct
+    public var transaction:SKPaymentTransaction
+    public let error:Error
 }
 
 public struct Purchase :PurchaseTransaction{
@@ -54,7 +60,7 @@ public struct Purchase :PurchaseTransaction{
     public let needFinish:Bool
 }
 
-public typealias PaymentResult = Result<PaymentSuccess,SKError>
+public typealias PaymentResult = Result<PaymentInfo,Error>
 
 public typealias PaymentCallback = (PaymentResult) -> Void
 

@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SwiftPurchase"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "SwiftPurchase 是针对iOS内购写的一个工具类"
   spec.description  = <<-DESC
                          包含了获取产品列表，购买，restore，获取验证receipt
@@ -32,8 +32,8 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'RxSwift' do |sub|
     sub.source_files  = "SwiftPurchase/RxSwiftExtensions/**/*.swift"
-    sub.dependency  "SwiftPurchase/Core"
-    sub.dependency "RxSwift"
-    sub.dependency "RxCocoa"
+    sub.dependency "SwiftPurchase/Core"
+    sub.dependency "RxSwift", "~> 5.0"
+    sub.dependency "RxCocoa", "~> 5.0"
   end
 end

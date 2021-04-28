@@ -5,7 +5,7 @@
 //  Created by Quan Li on 2020/6/3.
 //  Copyright © 2020 Quan.Li. All rights reserved.
 //
-
+import Foundation
 import RxSwift
 import RxCocoa
 import StoreKit
@@ -16,8 +16,8 @@ public extension Reactive where Base == SwiftPurchase{
         return Single.create { (single) -> Disposable in
             Base.requestProductsInfo(productIds) { (result) in
                 switch result{
-                case .success((let products, let invalidProductIDs)):
-                    single(.success((products:products, invalidProductIDs:invalidProductIDs)))
+                case .success(let info):
+                    single(.success(info))
                 case .failure(let error):
                     single(.error(error))
                 }
@@ -103,7 +103,7 @@ public extension Reactive where Base == SwiftPurchase {
 
 //购买
 public extension Reactive where Base == SwiftPurchase {
-    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Single<PaymentSuccess>{
+    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Single<PaymentInfo>{
         return Single.create { (single) -> Disposable in
             Base.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox) { (result) in
                 switch result{

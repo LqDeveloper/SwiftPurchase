@@ -47,6 +47,16 @@ public extension SKError{
             return "付款折扣中缺少参数"
         case .invalidOfferPrice:
             return "您在App Store Connect中指定的价格不再有效"
+        case .overlayCancelled:
+            return "取消覆盖的错误代码"
+        case .overlayInvalidConfiguration:
+            return "叠加层配置的错误代码无效"
+        case .overlayTimeout:
+            return "覆盖超时"
+        case .ineligibleForOffer:
+            return "用户不符合订阅条件"
+        case .unsupportedPlatform:
+            return "当前平台不支持叠加层"
         @unknown default:return "未知错误"
         }
     }

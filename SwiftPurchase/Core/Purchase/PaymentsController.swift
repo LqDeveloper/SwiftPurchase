@@ -65,7 +65,7 @@ class PaymentsController:TransactionHandle {
         let transactionState = transaction.transactionState
         
         if transactionState == .purchased {
-            payment.callback(.success(PaymentSuccess.init(product:payment.product,transaction: transaction, needFinish: !payment.atomically)))
+            payment.callback(.success(PaymentInfo.init(product:payment.product,transaction: transaction, needFinish: !payment.atomically)))
             
             if payment.atomically {
                 paymentQueue.finishTransaction(transaction)
@@ -75,10 +75,9 @@ class PaymentsController:TransactionHandle {
         }
         
         if transactionState == .failed {
-            if let error = transaction.error as NSError? {
-                payment.callback(.failure(SKError(_nsError: error)))
-            }else{
-                payment.callback(.failure(SKError.createError(.unknown,"Unknown error")))
+            if let error = transaction.error {
+                let error = PaymentFailure.init(product: payment.product, transaction: transaction, error: error)
+                payment.callback(.failure(error))
             }
             paymentQueue.finishTransaction(transaction)
             payments.remove(at: paymentIndex)
