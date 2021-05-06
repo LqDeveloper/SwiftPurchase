@@ -2,13 +2,12 @@
 //  AppDelegate.swift
 //  SwiftPurchase
 //
-//  Created by Quan Li on 2020/6/4.
-//  Copyright © 2020 Quan.Li. All rights reserved.
+//  Created by Quan Li on 2021/5/6.
 //
 
 import UIKit
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

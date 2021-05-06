@@ -1,6 +1,0 @@
-framework module Pods_SwiftPurchase {
-  umbrella header "Pods-SwiftPurchase-umbrella.h"
-
-  export *
-  module * { export * }
-}

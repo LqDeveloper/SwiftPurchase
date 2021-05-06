@@ -3,355 +3,206 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DBCC007021365961D5F412C /* Pods_SwiftPurchaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B2F562263DD904FD8789D1 /* Pods_SwiftPurchaseUITests.framework */; };
-		517A81D62488875D0085D51B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81D52488875D0085D51B /* AppDelegate.swift */; };
-		517A81D82488875D0085D51B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81D72488875D0085D51B /* SceneDelegate.swift */; };
-		517A81DA2488875D0085D51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81D92488875D0085D51B /* ViewController.swift */; };
-		517A81DD2488875D0085D51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517A81DB2488875D0085D51B /* Main.storyboard */; };
-		517A81DF2488875E0085D51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517A81DE2488875E0085D51B /* Assets.xcassets */; };
-		517A81E22488875E0085D51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517A81E02488875E0085D51B /* LaunchScreen.storyboard */; };
-		517A81ED2488875E0085D51B /* SwiftPurchaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81EC2488875E0085D51B /* SwiftPurchaseTests.swift */; };
-		517A81F82488875E0085D51B /* SwiftPurchaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A81F72488875E0085D51B /* SwiftPurchaseUITests.swift */; };
-		517A821C2488876A0085D51B /* SwiftPurchase+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */; };
-		517A821D2488876A0085D51B /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82092488876A0085D51B /* ReceiptController.swift */; };
-		517A821E2488876A0085D51B /* AppleReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820A2488876A0085D51B /* AppleReceiptRequest.swift */; };
-		517A82202488876A0085D51B /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820C2488876A0085D51B /* AppleReceiptValidator.swift */; };
-		517A82212488876A0085D51B /* RestoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820E2488876A0085D51B /* RestoreController.swift */; };
-		517A82222488876A0085D51B /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820F2488876A0085D51B /* PurchaseController.swift */; };
-		517A82232488876A0085D51B /* CompleteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82102488876A0085D51B /* CompleteController.swift */; };
-		517A82242488876A0085D51B /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82112488876A0085D51B /* PaymentsController.swift */; };
-		517A82252488876A0085D51B /* AppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82122488876A0085D51B /* AppPurchase.swift */; };
-		517A82262488876A0085D51B /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82142488876A0085D51B /* ProductsInfoController.swift */; };
-		517A82272488876A0085D51B /* AppProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82152488876A0085D51B /* AppProductInfo.swift */; };
-		517A82282488876A0085D51B /* AppleProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82162488876A0085D51B /* AppleProductRequest.swift */; };
-		517A82292488876A0085D51B /* SKProductExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82182488876A0085D51B /* SKProductExtensions.swift */; };
-		517A822A2488876A0085D51B /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82192488876A0085D51B /* ResultExtensions.swift */; };
-		517A822B2488876A0085D51B /* SKErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A821A2488876A0085D51B /* SKErrorExtensions.swift */; };
-		517A822C2488876A0085D51B /* SwiftPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A821B2488876A0085D51B /* SwiftPurchase.swift */; };
-		8F81C6F9A911C3006B1A2223 /* Pods_SwiftPurchase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781C48A678A708A7D7B886E4 /* Pods_SwiftPurchase.framework */; };
-		91586AB4EECE17D9BA20B9D2 /* Pods_SwiftPurchaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD16650341AE49894FEC98D /* Pods_SwiftPurchaseTests.framework */; };
+		51E9111D2643D4EE003BC97C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9111C2643D4EE003BC97C /* AppDelegate.swift */; };
+		51E9111F2643D4EE003BC97C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9111E2643D4EE003BC97C /* SceneDelegate.swift */; };
+		51E911212643D4EE003BC97C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911202643D4EE003BC97C /* ViewController.swift */; };
+		51E911242643D4EE003BC97C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E911222643D4EE003BC97C /* Main.storyboard */; };
+		51E911262643D4EE003BC97C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51E911252643D4EE003BC97C /* Assets.xcassets */; };
+		51E911292643D4EE003BC97C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51E911272643D4EE003BC97C /* LaunchScreen.storyboard */; };
+		51E911462643D509003BC97C /* SwiftPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911312643D509003BC97C /* SwiftPurchase.swift */; };
+		51E911472643D509003BC97C /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911332643D509003BC97C /* ReceiptController.swift */; };
+		51E911482643D509003BC97C /* AppleReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911342643D509003BC97C /* AppleReceiptRequest.swift */; };
+		51E911492643D509003BC97C /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911352643D509003BC97C /* AppleReceiptValidator.swift */; };
+		51E9114A2643D509003BC97C /* RestoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911372643D509003BC97C /* RestoreController.swift */; };
+		51E9114B2643D509003BC97C /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911382643D509003BC97C /* PurchaseController.swift */; };
+		51E9114C2643D509003BC97C /* CompleteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911392643D509003BC97C /* CompleteController.swift */; };
+		51E9114D2643D509003BC97C /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9113A2643D509003BC97C /* PaymentsController.swift */; };
+		51E9114E2643D509003BC97C /* AppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9113B2643D509003BC97C /* AppPurchase.swift */; };
+		51E9114F2643D509003BC97C /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9113D2643D509003BC97C /* ProductsInfoController.swift */; };
+		51E911502643D509003BC97C /* AppProductInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9113E2643D509003BC97C /* AppProductInfo.swift */; };
+		51E911512643D509003BC97C /* AppleProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E9113F2643D509003BC97C /* AppleProductRequest.swift */; };
+		51E911522643D509003BC97C /* SKProductExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911412643D509003BC97C /* SKProductExtensions.swift */; };
+		51E911532643D509003BC97C /* ResultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911422643D509003BC97C /* ResultExtensions.swift */; };
+		51E911542643D509003BC97C /* SKErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911432643D509003BC97C /* SKErrorExtensions.swift */; };
+		51E911552643D509003BC97C /* RxSwiftPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E911452643D509003BC97C /* RxSwiftPurchase.swift */; };
+		51E911582643D537003BC97C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51E911572643D537003BC97C /* RxSwift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		517A81E92488875E0085D51B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 517A81CA2488875D0085D51B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 517A81D12488875D0085D51B;
-			remoteInfo = SwiftPurchase;
-		};
-		517A81F42488875E0085D51B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 517A81CA2488875D0085D51B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 517A81D12488875D0085D51B;
-			remoteInfo = SwiftPurchase;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		33C22DA78E4E98A8CCEB072F /* Pods-SwiftPurchase-SwiftPurchaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchase-SwiftPurchaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPurchase-SwiftPurchaseUITests/Pods-SwiftPurchase-SwiftPurchaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		42BEA2068F524D268A7364D0 /* Pods-SwiftPurchaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchaseUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftPurchaseUITests/Pods-SwiftPurchaseUITests.release.xcconfig"; sourceTree = "<group>"; };
-		517A81D22488875D0085D51B /* SwiftPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		517A81D52488875D0085D51B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		517A81D72488875D0085D51B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		517A81D92488875D0085D51B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		517A81DC2488875D0085D51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		517A81DE2488875E0085D51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		517A81E12488875E0085D51B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		517A81E32488875E0085D51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		517A81E82488875E0085D51B /* SwiftPurchaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPurchaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		517A81EC2488875E0085D51B /* SwiftPurchaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPurchaseTests.swift; sourceTree = "<group>"; };
-		517A81EE2488875E0085D51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		517A81F32488875E0085D51B /* SwiftPurchaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPurchaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		517A81F72488875E0085D51B /* SwiftPurchaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPurchaseUITests.swift; sourceTree = "<group>"; };
-		517A81F92488875E0085D51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftPurchase+RxSwift.swift"; sourceTree = "<group>"; };
-		517A82092488876A0085D51B /* ReceiptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
-		517A820A2488876A0085D51B /* AppleReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptRequest.swift; sourceTree = "<group>"; };
-		517A820C2488876A0085D51B /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptValidator.swift; sourceTree = "<group>"; };
-		517A820E2488876A0085D51B /* RestoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreController.swift; sourceTree = "<group>"; };
-		517A820F2488876A0085D51B /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
-		517A82102488876A0085D51B /* CompleteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteController.swift; sourceTree = "<group>"; };
-		517A82112488876A0085D51B /* PaymentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsController.swift; sourceTree = "<group>"; };
-		517A82122488876A0085D51B /* AppPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPurchase.swift; sourceTree = "<group>"; };
-		517A82142488876A0085D51B /* ProductsInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsInfoController.swift; sourceTree = "<group>"; };
-		517A82152488876A0085D51B /* AppProductInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppProductInfo.swift; sourceTree = "<group>"; };
-		517A82162488876A0085D51B /* AppleProductRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleProductRequest.swift; sourceTree = "<group>"; };
-		517A82182488876A0085D51B /* SKProductExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductExtensions.swift; sourceTree = "<group>"; };
-		517A82192488876A0085D51B /* ResultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
-		517A821A2488876A0085D51B /* SKErrorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKErrorExtensions.swift; sourceTree = "<group>"; };
-		517A821B2488876A0085D51B /* SwiftPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPurchase.swift; sourceTree = "<group>"; };
-		557B81A3E76281218E2764D2 /* Pods-SwiftPurchase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchase.release.xcconfig"; path = "Target Support Files/Pods-SwiftPurchase/Pods-SwiftPurchase.release.xcconfig"; sourceTree = "<group>"; };
-		781C48A678A708A7D7B886E4 /* Pods_SwiftPurchase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPurchase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A64440D41F2FD8386D4BAC52 /* Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig"; path = "Target Support Files/Pods-SwiftPurchase-SwiftPurchaseUITests/Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig"; sourceTree = "<group>"; };
-		ADD16650341AE49894FEC98D /* Pods_SwiftPurchaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPurchaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C080FEB72F2DA641FBE53CB6 /* Pods-SwiftPurchase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchase.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPurchase/Pods-SwiftPurchase.debug.xcconfig"; sourceTree = "<group>"; };
-		C204268C3C2F20A8DAF4828D /* Pods-SwiftPurchaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchaseTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftPurchaseTests/Pods-SwiftPurchaseTests.release.xcconfig"; sourceTree = "<group>"; };
-		EB084DE606CC28D1ECDEC781 /* Pods-SwiftPurchaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchaseTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPurchaseTests/Pods-SwiftPurchaseTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F2B2F562263DD904FD8789D1 /* Pods_SwiftPurchaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftPurchaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF052D0FDE01D6F936EA2952 /* Pods-SwiftPurchaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftPurchaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftPurchaseUITests/Pods-SwiftPurchaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		51E911192643D4EE003BC97C /* SwiftPurchase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPurchase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51E9111C2643D4EE003BC97C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		51E9111E2643D4EE003BC97C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		51E911202643D4EE003BC97C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51E911232643D4EE003BC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		51E911252643D4EE003BC97C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51E911282643D4EE003BC97C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		51E9112A2643D4EE003BC97C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51E911312643D509003BC97C /* SwiftPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPurchase.swift; sourceTree = "<group>"; };
+		51E911332643D509003BC97C /* ReceiptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
+		51E911342643D509003BC97C /* AppleReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptRequest.swift; sourceTree = "<group>"; };
+		51E911352643D509003BC97C /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptValidator.swift; sourceTree = "<group>"; };
+		51E911372643D509003BC97C /* RestoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreController.swift; sourceTree = "<group>"; };
+		51E911382643D509003BC97C /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
+		51E911392643D509003BC97C /* CompleteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteController.swift; sourceTree = "<group>"; };
+		51E9113A2643D509003BC97C /* PaymentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsController.swift; sourceTree = "<group>"; };
+		51E9113B2643D509003BC97C /* AppPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppPurchase.swift; sourceTree = "<group>"; };
+		51E9113D2643D509003BC97C /* ProductsInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsInfoController.swift; sourceTree = "<group>"; };
+		51E9113E2643D509003BC97C /* AppProductInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppProductInfo.swift; sourceTree = "<group>"; };
+		51E9113F2643D509003BC97C /* AppleProductRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleProductRequest.swift; sourceTree = "<group>"; };
+		51E911412643D509003BC97C /* SKProductExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKProductExtensions.swift; sourceTree = "<group>"; };
+		51E911422643D509003BC97C /* ResultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultExtensions.swift; sourceTree = "<group>"; };
+		51E911432643D509003BC97C /* SKErrorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKErrorExtensions.swift; sourceTree = "<group>"; };
+		51E911452643D509003BC97C /* RxSwiftPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxSwiftPurchase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		517A81CF2488875D0085D51B /* Frameworks */ = {
+		51E911162643D4EE003BC97C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F81C6F9A911C3006B1A2223 /* Pods_SwiftPurchase.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517A81E52488875E0085D51B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91586AB4EECE17D9BA20B9D2 /* Pods_SwiftPurchaseTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517A81F02488875E0085D51B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DBCC007021365961D5F412C /* Pods_SwiftPurchaseUITests.framework in Frameworks */,
+				51E911582643D537003BC97C /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		39DF117EB03DD5291405D9CA /* Frameworks */ = {
+		51E911102643D4EE003BC97C = {
 			isa = PBXGroup;
 			children = (
-				781C48A678A708A7D7B886E4 /* Pods_SwiftPurchase.framework */,
-				ADD16650341AE49894FEC98D /* Pods_SwiftPurchaseTests.framework */,
-				F2B2F562263DD904FD8789D1 /* Pods_SwiftPurchaseUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		49D86E521F0872781F51CF00 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C080FEB72F2DA641FBE53CB6 /* Pods-SwiftPurchase.debug.xcconfig */,
-				557B81A3E76281218E2764D2 /* Pods-SwiftPurchase.release.xcconfig */,
-				33C22DA78E4E98A8CCEB072F /* Pods-SwiftPurchase-SwiftPurchaseUITests.debug.xcconfig */,
-				A64440D41F2FD8386D4BAC52 /* Pods-SwiftPurchase-SwiftPurchaseUITests.release.xcconfig */,
-				EB084DE606CC28D1ECDEC781 /* Pods-SwiftPurchaseTests.debug.xcconfig */,
-				C204268C3C2F20A8DAF4828D /* Pods-SwiftPurchaseTests.release.xcconfig */,
-				FF052D0FDE01D6F936EA2952 /* Pods-SwiftPurchaseUITests.debug.xcconfig */,
-				42BEA2068F524D268A7364D0 /* Pods-SwiftPurchaseUITests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		517A81C92488875D0085D51B = {
-			isa = PBXGroup;
-			children = (
-				517A81D42488875D0085D51B /* SwiftPurchase */,
-				517A81EB2488875E0085D51B /* SwiftPurchaseTests */,
-				517A81F62488875E0085D51B /* SwiftPurchaseUITests */,
-				517A81D32488875D0085D51B /* Products */,
-				49D86E521F0872781F51CF00 /* Pods */,
-				39DF117EB03DD5291405D9CA /* Frameworks */,
+				51E9111B2643D4EE003BC97C /* SwiftPurchase */,
+				51E9111A2643D4EE003BC97C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		517A81D32488875D0085D51B /* Products */ = {
+		51E9111A2643D4EE003BC97C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				517A81D22488875D0085D51B /* SwiftPurchase.app */,
-				517A81E82488875E0085D51B /* SwiftPurchaseTests.xctest */,
-				517A81F32488875E0085D51B /* SwiftPurchaseUITests.xctest */,
+				51E911192643D4EE003BC97C /* SwiftPurchase.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		517A81D42488875D0085D51B /* SwiftPurchase */ = {
+		51E9111B2643D4EE003BC97C /* SwiftPurchase */ = {
 			isa = PBXGroup;
 			children = (
-				517A82072488876A0085D51B /* Core */,
-				517A82052488876A0085D51B /* RxSwiftExtensions */,
-				517A81D52488875D0085D51B /* AppDelegate.swift */,
-				517A81D72488875D0085D51B /* SceneDelegate.swift */,
-				517A81D92488875D0085D51B /* ViewController.swift */,
-				517A81DB2488875D0085D51B /* Main.storyboard */,
-				517A81DE2488875E0085D51B /* Assets.xcassets */,
-				517A81E02488875E0085D51B /* LaunchScreen.storyboard */,
-				517A81E32488875E0085D51B /* Info.plist */,
+				51E911302643D509003BC97C /* Core */,
+				51E911442643D509003BC97C /* RxSwiftExtensions */,
+				51E9111C2643D4EE003BC97C /* AppDelegate.swift */,
+				51E9111E2643D4EE003BC97C /* SceneDelegate.swift */,
+				51E911202643D4EE003BC97C /* ViewController.swift */,
+				51E911222643D4EE003BC97C /* Main.storyboard */,
+				51E911252643D4EE003BC97C /* Assets.xcassets */,
+				51E911272643D4EE003BC97C /* LaunchScreen.storyboard */,
+				51E9112A2643D4EE003BC97C /* Info.plist */,
 			);
 			path = SwiftPurchase;
 			sourceTree = "<group>";
 		};
-		517A81EB2488875E0085D51B /* SwiftPurchaseTests */ = {
+		51E911302643D509003BC97C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				517A81EC2488875E0085D51B /* SwiftPurchaseTests.swift */,
-				517A81EE2488875E0085D51B /* Info.plist */,
-			);
-			path = SwiftPurchaseTests;
-			sourceTree = "<group>";
-		};
-		517A81F62488875E0085D51B /* SwiftPurchaseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				517A81F72488875E0085D51B /* SwiftPurchaseUITests.swift */,
-				517A81F92488875E0085D51B /* Info.plist */,
-			);
-			path = SwiftPurchaseUITests;
-			sourceTree = "<group>";
-		};
-		517A82052488876A0085D51B /* RxSwiftExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */,
-			);
-			path = RxSwiftExtensions;
-			sourceTree = "<group>";
-		};
-		517A82072488876A0085D51B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				517A82082488876A0085D51B /* Receipt */,
-				517A820D2488876A0085D51B /* Purchase */,
-				517A82132488876A0085D51B /* ProductInfo */,
-				517A82172488876A0085D51B /* Tool */,
-				517A821B2488876A0085D51B /* SwiftPurchase.swift */,
+				51E911312643D509003BC97C /* SwiftPurchase.swift */,
+				51E911322643D509003BC97C /* Receipt */,
+				51E911362643D509003BC97C /* Purchase */,
+				51E9113C2643D509003BC97C /* ProductInfo */,
+				51E911402643D509003BC97C /* Tool */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		517A82082488876A0085D51B /* Receipt */ = {
+		51E911322643D509003BC97C /* Receipt */ = {
 			isa = PBXGroup;
 			children = (
-				517A82092488876A0085D51B /* ReceiptController.swift */,
-				517A820A2488876A0085D51B /* AppleReceiptRequest.swift */,
-				517A820C2488876A0085D51B /* AppleReceiptValidator.swift */,
+				51E911332643D509003BC97C /* ReceiptController.swift */,
+				51E911342643D509003BC97C /* AppleReceiptRequest.swift */,
+				51E911352643D509003BC97C /* AppleReceiptValidator.swift */,
 			);
 			path = Receipt;
 			sourceTree = "<group>";
 		};
-		517A820D2488876A0085D51B /* Purchase */ = {
+		51E911362643D509003BC97C /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
-				517A820F2488876A0085D51B /* PurchaseController.swift */,
-				517A820E2488876A0085D51B /* RestoreController.swift */,
-				517A82102488876A0085D51B /* CompleteController.swift */,
-				517A82112488876A0085D51B /* PaymentsController.swift */,
-				517A82122488876A0085D51B /* AppPurchase.swift */,
+				51E911372643D509003BC97C /* RestoreController.swift */,
+				51E911382643D509003BC97C /* PurchaseController.swift */,
+				51E911392643D509003BC97C /* CompleteController.swift */,
+				51E9113A2643D509003BC97C /* PaymentsController.swift */,
+				51E9113B2643D509003BC97C /* AppPurchase.swift */,
 			);
 			path = Purchase;
 			sourceTree = "<group>";
 		};
-		517A82132488876A0085D51B /* ProductInfo */ = {
+		51E9113C2643D509003BC97C /* ProductInfo */ = {
 			isa = PBXGroup;
 			children = (
-				517A82142488876A0085D51B /* ProductsInfoController.swift */,
-				517A82152488876A0085D51B /* AppProductInfo.swift */,
-				517A82162488876A0085D51B /* AppleProductRequest.swift */,
+				51E9113D2643D509003BC97C /* ProductsInfoController.swift */,
+				51E9113E2643D509003BC97C /* AppProductInfo.swift */,
+				51E9113F2643D509003BC97C /* AppleProductRequest.swift */,
 			);
 			path = ProductInfo;
 			sourceTree = "<group>";
 		};
-		517A82172488876A0085D51B /* Tool */ = {
+		51E911402643D509003BC97C /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				517A82182488876A0085D51B /* SKProductExtensions.swift */,
-				517A82192488876A0085D51B /* ResultExtensions.swift */,
-				517A821A2488876A0085D51B /* SKErrorExtensions.swift */,
+				51E911412643D509003BC97C /* SKProductExtensions.swift */,
+				51E911422643D509003BC97C /* ResultExtensions.swift */,
+				51E911432643D509003BC97C /* SKErrorExtensions.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		51E911442643D509003BC97C /* RxSwiftExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				51E911452643D509003BC97C /* RxSwiftPurchase.swift */,
+			);
+			path = RxSwiftExtensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		517A81D12488875D0085D51B /* SwiftPurchase */ = {
+		51E911182643D4EE003BC97C /* SwiftPurchase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 517A81FC2488875E0085D51B /* Build configuration list for PBXNativeTarget "SwiftPurchase" */;
+			buildConfigurationList = 51E9112D2643D4EE003BC97C /* Build configuration list for PBXNativeTarget "SwiftPurchase" */;
 			buildPhases = (
-				49530FA1694C95F0D837AE79 /* [CP] Check Pods Manifest.lock */,
-				517A81CE2488875D0085D51B /* Sources */,
-				517A81CF2488875D0085D51B /* Frameworks */,
-				517A81D02488875D0085D51B /* Resources */,
-				320BE7D42864D7516A96BEFC /* [CP] Embed Pods Frameworks */,
+				51E911152643D4EE003BC97C /* Sources */,
+				51E911162643D4EE003BC97C /* Frameworks */,
+				51E911172643D4EE003BC97C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftPurchase;
+			packageProductDependencies = (
+				51E911572643D537003BC97C /* RxSwift */,
+			);
 			productName = SwiftPurchase;
-			productReference = 517A81D22488875D0085D51B /* SwiftPurchase.app */;
+			productReference = 51E911192643D4EE003BC97C /* SwiftPurchase.app */;
 			productType = "com.apple.product-type.application";
-		};
-		517A81E72488875E0085D51B /* SwiftPurchaseTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 517A81FF2488875E0085D51B /* Build configuration list for PBXNativeTarget "SwiftPurchaseTests" */;
-			buildPhases = (
-				23D670C771A60E3E8E395C75 /* [CP] Check Pods Manifest.lock */,
-				517A81E42488875E0085D51B /* Sources */,
-				517A81E52488875E0085D51B /* Frameworks */,
-				517A81E62488875E0085D51B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				517A81EA2488875E0085D51B /* PBXTargetDependency */,
-			);
-			name = SwiftPurchaseTests;
-			productName = SwiftPurchaseTests;
-			productReference = 517A81E82488875E0085D51B /* SwiftPurchaseTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		517A81F22488875E0085D51B /* SwiftPurchaseUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 517A82022488875E0085D51B /* Build configuration list for PBXNativeTarget "SwiftPurchaseUITests" */;
-			buildPhases = (
-				6CA6DFD3C3B3EAF1BA47681F /* [CP] Check Pods Manifest.lock */,
-				517A81EF2488875E0085D51B /* Sources */,
-				517A81F02488875E0085D51B /* Frameworks */,
-				517A81F12488875E0085D51B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				517A81F52488875E0085D51B /* PBXTargetDependency */,
-			);
-			name = SwiftPurchaseUITests;
-			productName = SwiftPurchaseUITests;
-			productReference = 517A81F32488875E0085D51B /* SwiftPurchaseUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		517A81CA2488875D0085D51B /* Project object */ = {
+		51E911112643D4EE003BC97C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = Quan.Li;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					517A81D12488875D0085D51B = {
-						CreatedOnToolsVersion = 11.5;
-					};
-					517A81E72488875E0085D51B = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 517A81D12488875D0085D51B;
-					};
-					517A81F22488875E0085D51B = {
-						CreatedOnToolsVersion = 11.5;
-						TestTargetID = 517A81D12488875D0085D51B;
+					51E911182643D4EE003BC97C = {
+						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = 517A81CD2488875D0085D51B /* Build configuration list for PBXProject "SwiftPurchase" */;
+			buildConfigurationList = 51E911142643D4EE003BC97C /* Build configuration list for PBXProject "SwiftPurchase" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -359,202 +210,74 @@
 				en,
 				Base,
 			);
-			mainGroup = 517A81C92488875D0085D51B;
-			productRefGroup = 517A81D32488875D0085D51B /* Products */;
+			mainGroup = 51E911102643D4EE003BC97C;
+			packageReferences = (
+				51E911562643D537003BC97C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 51E9111A2643D4EE003BC97C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				517A81D12488875D0085D51B /* SwiftPurchase */,
-				517A81E72488875E0085D51B /* SwiftPurchaseTests */,
-				517A81F22488875E0085D51B /* SwiftPurchaseUITests */,
+				51E911182643D4EE003BC97C /* SwiftPurchase */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		517A81D02488875D0085D51B /* Resources */ = {
+		51E911172643D4EE003BC97C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517A81E22488875E0085D51B /* LaunchScreen.storyboard in Resources */,
-				517A81DF2488875E0085D51B /* Assets.xcassets in Resources */,
-				517A81DD2488875D0085D51B /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517A81E62488875E0085D51B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517A81F12488875E0085D51B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				51E911292643D4EE003BC97C /* LaunchScreen.storyboard in Resources */,
+				51E911262643D4EE003BC97C /* Assets.xcassets in Resources */,
+				51E911242643D4EE003BC97C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		23D670C771A60E3E8E395C75 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftPurchaseTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		320BE7D42864D7516A96BEFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftPurchase/Pods-SwiftPurchase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SwiftPurchase/Pods-SwiftPurchase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftPurchase/Pods-SwiftPurchase-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49530FA1694C95F0D837AE79 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftPurchase-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6CA6DFD3C3B3EAF1BA47681F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftPurchaseUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		517A81CE2488875D0085D51B /* Sources */ = {
+		51E911152643D4EE003BC97C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517A82282488876A0085D51B /* AppleProductRequest.swift in Sources */,
-				517A821D2488876A0085D51B /* ReceiptController.swift in Sources */,
-				517A82262488876A0085D51B /* ProductsInfoController.swift in Sources */,
-				517A821C2488876A0085D51B /* SwiftPurchase+RxSwift.swift in Sources */,
-				517A82222488876A0085D51B /* PurchaseController.swift in Sources */,
-				517A822B2488876A0085D51B /* SKErrorExtensions.swift in Sources */,
-				517A82202488876A0085D51B /* AppleReceiptValidator.swift in Sources */,
-				517A82292488876A0085D51B /* SKProductExtensions.swift in Sources */,
-				517A82242488876A0085D51B /* PaymentsController.swift in Sources */,
-				517A81DA2488875D0085D51B /* ViewController.swift in Sources */,
-				517A82252488876A0085D51B /* AppPurchase.swift in Sources */,
-				517A82212488876A0085D51B /* RestoreController.swift in Sources */,
-				517A81D62488875D0085D51B /* AppDelegate.swift in Sources */,
-				517A822C2488876A0085D51B /* SwiftPurchase.swift in Sources */,
-				517A81D82488875D0085D51B /* SceneDelegate.swift in Sources */,
-				517A82272488876A0085D51B /* AppProductInfo.swift in Sources */,
-				517A821E2488876A0085D51B /* AppleReceiptRequest.swift in Sources */,
-				517A822A2488876A0085D51B /* ResultExtensions.swift in Sources */,
-				517A82232488876A0085D51B /* CompleteController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517A81E42488875E0085D51B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				517A81ED2488875E0085D51B /* SwiftPurchaseTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		517A81EF2488875E0085D51B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				517A81F82488875E0085D51B /* SwiftPurchaseUITests.swift in Sources */,
+				51E911552643D509003BC97C /* RxSwiftPurchase.swift in Sources */,
+				51E9114E2643D509003BC97C /* AppPurchase.swift in Sources */,
+				51E9114D2643D509003BC97C /* PaymentsController.swift in Sources */,
+				51E911472643D509003BC97C /* ReceiptController.swift in Sources */,
+				51E911522643D509003BC97C /* SKProductExtensions.swift in Sources */,
+				51E911512643D509003BC97C /* AppleProductRequest.swift in Sources */,
+				51E911212643D4EE003BC97C /* ViewController.swift in Sources */,
+				51E9114A2643D509003BC97C /* RestoreController.swift in Sources */,
+				51E9114F2643D509003BC97C /* ProductsInfoController.swift in Sources */,
+				51E911532643D509003BC97C /* ResultExtensions.swift in Sources */,
+				51E9111D2643D4EE003BC97C /* AppDelegate.swift in Sources */,
+				51E911502643D509003BC97C /* AppProductInfo.swift in Sources */,
+				51E911462643D509003BC97C /* SwiftPurchase.swift in Sources */,
+				51E9111F2643D4EE003BC97C /* SceneDelegate.swift in Sources */,
+				51E911482643D509003BC97C /* AppleReceiptRequest.swift in Sources */,
+				51E9114B2643D509003BC97C /* PurchaseController.swift in Sources */,
+				51E9114C2643D509003BC97C /* CompleteController.swift in Sources */,
+				51E911542643D509003BC97C /* SKErrorExtensions.swift in Sources */,
+				51E911492643D509003BC97C /* AppleReceiptValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		517A81EA2488875E0085D51B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 517A81D12488875D0085D51B /* SwiftPurchase */;
-			targetProxy = 517A81E92488875E0085D51B /* PBXContainerItemProxy */;
-		};
-		517A81F52488875E0085D51B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 517A81D12488875D0085D51B /* SwiftPurchase */;
-			targetProxy = 517A81F42488875E0085D51B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		517A81DB2488875D0085D51B /* Main.storyboard */ = {
+		51E911222643D4EE003BC97C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				517A81DC2488875D0085D51B /* Base */,
+				51E911232643D4EE003BC97C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		517A81E02488875E0085D51B /* LaunchScreen.storyboard */ = {
+		51E911272643D4EE003BC97C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				517A81E12488875E0085D51B /* Base */,
+				51E911282643D4EE003BC97C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -562,7 +285,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		517A81FA2488875E0085D51B /* Debug */ = {
+		51E9112B2643D4EE003BC97C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -588,6 +311,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -612,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -622,7 +346,7 @@
 			};
 			name = Debug;
 		};
-		517A81FB2488875E0085D51B /* Release */ = {
+		51E9112C2643D4EE003BC97C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -648,6 +372,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -666,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -676,12 +401,13 @@
 			};
 			name = Release;
 		};
-		517A81FD2488875E0085D51B /* Debug */ = {
+		51E9112E2643D4EE003BC97C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C080FEB72F2DA641FBE53CB6 /* Pods-SwiftPurchase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8US8C88B4V;
 				INFOPLIST_FILE = SwiftPurchase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -694,12 +420,13 @@
 			};
 			name = Debug;
 		};
-		517A81FE2488875E0085D51B /* Release */ = {
+		51E9112F2643D4EE003BC97C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 557B81A3E76281218E2764D2 /* Pods-SwiftPurchase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8US8C88B4V;
 				INFOPLIST_FILE = SwiftPurchase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,133 +436,50 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		517A82002488875E0085D51B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB084DE606CC28D1ECDEC781 /* Pods-SwiftPurchaseTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftPurchaseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Quan.Li.SwiftPurchaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftPurchase.app/SwiftPurchase";
-			};
-			name = Debug;
-		};
-		517A82012488875E0085D51B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C204268C3C2F20A8DAF4828D /* Pods-SwiftPurchaseTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftPurchaseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Quan.Li.SwiftPurchaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftPurchase.app/SwiftPurchase";
-			};
-			name = Release;
-		};
-		517A82032488875E0085D51B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF052D0FDE01D6F936EA2952 /* Pods-SwiftPurchaseUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftPurchaseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Quan.Li.SwiftPurchaseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftPurchase;
-			};
-			name = Debug;
-		};
-		517A82042488875E0085D51B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42BEA2068F524D268A7364D0 /* Pods-SwiftPurchaseUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftPurchaseUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Quan.Li.SwiftPurchaseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SwiftPurchase;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		517A81CD2488875D0085D51B /* Build configuration list for PBXProject "SwiftPurchase" */ = {
+		51E911142643D4EE003BC97C /* Build configuration list for PBXProject "SwiftPurchase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				517A81FA2488875E0085D51B /* Debug */,
-				517A81FB2488875E0085D51B /* Release */,
+				51E9112B2643D4EE003BC97C /* Debug */,
+				51E9112C2643D4EE003BC97C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		517A81FC2488875E0085D51B /* Build configuration list for PBXNativeTarget "SwiftPurchase" */ = {
+		51E9112D2643D4EE003BC97C /* Build configuration list for PBXNativeTarget "SwiftPurchase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				517A81FD2488875E0085D51B /* Debug */,
-				517A81FE2488875E0085D51B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		517A81FF2488875E0085D51B /* Build configuration list for PBXNativeTarget "SwiftPurchaseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				517A82002488875E0085D51B /* Debug */,
-				517A82012488875E0085D51B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		517A82022488875E0085D51B /* Build configuration list for PBXNativeTarget "SwiftPurchaseUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				517A82032488875E0085D51B /* Debug */,
-				517A82042488875E0085D51B /* Release */,
+				51E9112E2643D4EE003BC97C /* Debug */,
+				51E9112F2643D4EE003BC97C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51E911562643D537003BC97C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51E911572643D537003BC97C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51E911562643D537003BC97C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 517A81CA2488875D0085D51B /* Project object */;
+	rootObject = 51E911112643D4EE003BC97C /* Project object */;
 }

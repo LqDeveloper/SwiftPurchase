@@ -57,6 +57,8 @@ public extension SKError{
             return "用户不符合订阅条件"
         case .unsupportedPlatform:
             return "当前平台不支持叠加层"
+        case .overlayPresentedInBackgroundScene:
+            return "客户端尝试在UIWindowScene中显示SKOverlay，而不是在前景中显示"
         @unknown default:return "未知错误"
         }
     }
