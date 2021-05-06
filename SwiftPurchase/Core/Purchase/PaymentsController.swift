@@ -10,6 +10,8 @@ import StoreKit
 
 public struct Payment: Hashable {
     let product: SKProduct
+    
+    let paymentDiscount: PaymentDiscount?
     let quantity: Int
     let atomically: Bool
     let applicationUsername: String
@@ -26,6 +28,19 @@ public struct Payment: Hashable {
     
     public static func == (lhs: Payment, rhs: Payment) -> Bool {
         return lhs.product.productIdentifier == rhs.product.productIdentifier
+    }
+}
+
+public struct PaymentDiscount {
+    let discount: AnyObject?
+    
+    @available(iOS 12.2, tvOS 12.2, OSX 10.14.4, watchOS 6.2, macCatalyst 13.0, *)
+    public init(discount: SKPaymentDiscount) {
+        self.discount = discount
+    }
+    
+    private init() {
+        self.discount = nil
     }
 }
 
@@ -74,6 +89,17 @@ class PaymentsController:TransactionHandle {
             return true
         }
         
+        if transactionState == .restored {
+            print("意外的已还原的付款交易 productIdentifier:\(transaction.payment.productIdentifier)")
+            payment.callback(.success(PaymentInfo.init(product:payment.product,transaction: transaction, needFinish: !payment.atomically)))
+            
+            if payment.atomically {
+                paymentQueue.finishTransaction(transaction)
+            }
+            payments.remove(at: paymentIndex)
+            return true
+        }
+        
         if transactionState == .failed {
             if let error = transaction.error {
                 let error = PaymentFailure.init(product: payment.product, transaction: transaction, error: error)
@@ -84,9 +110,6 @@ class PaymentsController:TransactionHandle {
             return true
         }
         
-        if transactionState == .restored {
-            print("Unexpected restored transaction for payment \(productIdentifier)")
-        }
         return false
     }
     

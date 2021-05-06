@@ -62,10 +62,10 @@ public extension SwiftPurchase{
 
 //购买产品
 public extension SwiftPurchase{
-    static func purchaseProduct(_ productId: String, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping (PaymentResult) -> Void) {
+    static func purchase(_ productId: String, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false,paymentDiscount: PaymentDiscount? = nil, completion: @escaping (PaymentResult) -> Void) {
         requestProductsInfo([productId]) {(result) in
             if let product = result.products.first {
-                SwiftPurchase.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, completion: completion)
+                SwiftPurchase.purchase(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox,paymentDiscount: paymentDiscount, completion: completion)
             }else if let error = result.error{
                 completion(.failure(error))
             }else if let invalidProductId = result.invalidProductIDs.first {
@@ -79,8 +79,8 @@ public extension SwiftPurchase{
         }
     }
     
-    static func purchaseProduct(_ product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false, completion: @escaping PaymentCallback) {
-        shared.purchaseController.startPayment(Payment.init(product: product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, callback: completion))
+    static func purchase(_ product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false,paymentDiscount: PaymentDiscount? = nil, completion: @escaping PaymentCallback) {
+        shared.purchaseController.startPayment(Payment.init(product: product,paymentDiscount: paymentDiscount, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox, callback: completion))
     }
     
     static func finishTransaction(_ transaction: PurchaseTransaction) {
@@ -92,6 +92,22 @@ public extension SwiftPurchase{
 public extension SwiftPurchase{
     static func restorePurchases(atomically: Bool = true, applicationUsername: String = "", completion: @escaping RestoreCallback) {
         shared.purchaseController.restorePurchases(RestorePurchases.init(atomically: atomically, applicationUsername: applicationUsername, callback: completion))
+    }
+}
+/*
+ 对于启用了“家庭共享”的产品，可能会发生以下情况触发此方法：
+    购买者离开了他们共享订阅或非消耗品的家庭组。
+    购买者禁用非消耗者的家庭共享，或停止共享订阅。
+    购买者隐藏了一个应用，这使得他们的非消耗性购买无法共享。
+    家庭成员离开了小组，不再可以共享购买。
+通过离开家庭组，或以上述任何一种方式禁用共享，家庭成员将不再有权进行家庭共享的购买。 productIdentifiers参数包含已撤销的产品ID
+ */
+public extension SwiftPurchase{
+    /// 权利撤销通知
+    /// - Parameter completion: 返回吊销的产品标识符列表
+    @available(iOS 14, tvOS 14, OSX 11, watchOS 7, macCatalyst 14, *)
+    static func onEntitlementRevocation(completion: @escaping ([String]) -> Void) {
+        shared.purchaseController.onEntitlementRevocation(completion)
     }
 }
 

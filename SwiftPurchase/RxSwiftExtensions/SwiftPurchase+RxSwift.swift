@@ -103,9 +103,9 @@ public extension Reactive where Base == SwiftPurchase {
 
 //购买
 public extension Reactive where Base == SwiftPurchase {
-    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Single<PaymentInfo>{
+    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false,paymentDiscount: PaymentDiscount? = nil) -> Single<PaymentInfo>{
         return Single.create { (single) -> Disposable in
-            Base.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox) { (result) in
+            Base.purchase(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox,paymentDiscount:paymentDiscount) { (result) in
                 switch result{
                 case .success(let model):
                     single(.success(model))
@@ -118,9 +118,9 @@ public extension Reactive where Base == SwiftPurchase {
     }
     
     
-    static func purchaseWithDriver(_ product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false) -> Driver<PaymentResult>{
+    static func purchaseWithDriver(_ product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false,paymentDiscount: PaymentDiscount? = nil) -> Driver<PaymentResult>{
         return Single.create { (single) -> Disposable in
-            Base.purchaseProduct(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox) { (result) in
+            Base.purchase(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox,paymentDiscount:paymentDiscount) { (result) in
                 single(.success(result))
             }
             return Disposables.create {}
@@ -159,5 +159,23 @@ public extension Reactive where Base == SwiftPurchase {
     
     static func completeWithDriver(atomically: Bool = true) -> Driver<[Purchase]>{
         return completeWithSingle(atomically: atomically).asDriver(onErrorJustReturn: [])
+    }
+}
+
+
+public extension Reactive where Base == SwiftPurchase {
+    @available(iOS 14, tvOS 14, OSX 11, watchOS 7, macCatalyst 14, *)
+    static func entitlementRevocationWithSingle() -> Single<[String]>{
+        return Single.create { (single) -> Disposable in
+            Base.onEntitlementRevocation { productIds in
+                single(.success(productIds))
+            }
+            return Disposables.create {}
+        }
+    }
+    
+    @available(iOS 14, tvOS 14, OSX 11, watchOS 7, macCatalyst 14, *)
+    static func entitlementRevocationWithDriver() -> Driver<[String]>{
+        return entitlementRevocationWithSingle().asDriver(onErrorJustReturn: [])
     }
 }

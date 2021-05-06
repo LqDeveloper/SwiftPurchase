@@ -19,7 +19,6 @@
 		517A821C2488876A0085D51B /* SwiftPurchase+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */; };
 		517A821D2488876A0085D51B /* ReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A82092488876A0085D51B /* ReceiptController.swift */; };
 		517A821E2488876A0085D51B /* AppleReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820A2488876A0085D51B /* AppleReceiptRequest.swift */; };
-		517A821F2488876A0085D51B /* AppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820B2488876A0085D51B /* AppReceiptVerificator.swift */; };
 		517A82202488876A0085D51B /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820C2488876A0085D51B /* AppleReceiptValidator.swift */; };
 		517A82212488876A0085D51B /* RestoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820E2488876A0085D51B /* RestoreController.swift */; };
 		517A82222488876A0085D51B /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517A820F2488876A0085D51B /* PurchaseController.swift */; };
@@ -74,7 +73,6 @@
 		517A82062488876A0085D51B /* SwiftPurchase+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftPurchase+RxSwift.swift"; sourceTree = "<group>"; };
 		517A82092488876A0085D51B /* ReceiptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptController.swift; sourceTree = "<group>"; };
 		517A820A2488876A0085D51B /* AppleReceiptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptRequest.swift; sourceTree = "<group>"; };
-		517A820B2488876A0085D51B /* AppReceiptVerificator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReceiptVerificator.swift; sourceTree = "<group>"; };
 		517A820C2488876A0085D51B /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleReceiptValidator.swift; sourceTree = "<group>"; };
 		517A820E2488876A0085D51B /* RestoreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoreController.swift; sourceTree = "<group>"; };
 		517A820F2488876A0085D51B /* PurchaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 			children = (
 				517A82092488876A0085D51B /* ReceiptController.swift */,
 				517A820A2488876A0085D51B /* AppleReceiptRequest.swift */,
-				517A820B2488876A0085D51B /* AppReceiptVerificator.swift */,
 				517A820C2488876A0085D51B /* AppleReceiptValidator.swift */,
 			);
 			path = Receipt;
@@ -242,8 +239,8 @@
 		517A820D2488876A0085D51B /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
-				517A820E2488876A0085D51B /* RestoreController.swift */,
 				517A820F2488876A0085D51B /* PurchaseController.swift */,
+				517A820E2488876A0085D51B /* RestoreController.swift */,
 				517A82102488876A0085D51B /* CompleteController.swift */,
 				517A82112488876A0085D51B /* PaymentsController.swift */,
 				517A82122488876A0085D51B /* AppPurchase.swift */,
@@ -504,7 +501,6 @@
 				517A81DA2488875D0085D51B /* ViewController.swift in Sources */,
 				517A82252488876A0085D51B /* AppPurchase.swift in Sources */,
 				517A82212488876A0085D51B /* RestoreController.swift in Sources */,
-				517A821F2488876A0085D51B /* AppReceiptVerificator.swift in Sources */,
 				517A81D62488875D0085D51B /* AppDelegate.swift in Sources */,
 				517A822C2488876A0085D51B /* SwiftPurchase.swift in Sources */,
 				517A81D82488875D0085D51B /* SceneDelegate.swift in Sources */,

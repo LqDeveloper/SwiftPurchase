@@ -20,6 +20,7 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
     
     var shouldAddStorePaymentHandler: ShouldAddStorePaymentHandler?
     var updatedDownloadsHandler: UpdatedDownloadsHandler?
+    private var entitlementRevocation: EntitlementRevocation?
     
     init(paymentQueue: SKPaymentQueue = SKPaymentQueue.default(),
          paymentsController: PaymentsController = PaymentsController(),
@@ -45,6 +46,12 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         skPayment.applicationUsername = payment.applicationUsername
         skPayment.quantity = payment.quantity
         
+        if #available(iOS 12.2, tvOS 12.2, OSX 10.14.4, watchOS 6.2, *) {
+            if let discount = payment.paymentDiscount?.discount as? SKPaymentDiscount {
+                skPayment.paymentDiscount = discount
+            }
+        }
+        
         #if os(iOS) || os(tvOS)
         if #available(iOS 8.3, tvOS 9.0, *) {
             skPayment.simulatesAskToBuyInSandbox = payment.simulatesAskToBuyInSandbox
@@ -61,6 +68,14 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         }
         paymentQueue.restoreCompletedTransactions(withApplicationUsername: restorePurchases.applicationUsername)
         restoreController.restore = restorePurchases
+    }
+    
+    func onEntitlementRevocation(_ revocation: @escaping EntitlementRevocation) {
+        guard entitlementRevocation == nil else {
+            return
+        }
+        
+        self.entitlementRevocation = revocation
     }
     
     func completeTransactions(_ completeTransactions: CompletePruchase) {
@@ -138,4 +153,9 @@ class PurchaseController: NSObject,AppPurchase, SKPaymentTransactionObserver {
         return shouldAddStorePaymentHandler?(payment, product) ?? false
     }
     #endif
+    
+    //告诉观察者用户不再有权进行一个或多个家庭共享的购买。
+    func paymentQueue(_ queue: SKPaymentQueue, didRevokeEntitlementsForProductIdentifiers productIdentifiers: [String]) {
+        self.entitlementRevocation?(productIdentifiers)
+    }
 }

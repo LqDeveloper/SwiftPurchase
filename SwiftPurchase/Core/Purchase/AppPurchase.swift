@@ -70,6 +70,8 @@ public typealias RestoreCallback = ([RestoreResult]) -> Void
 
 public typealias CompleteCallback = ([Purchase]) -> Void
 
+public typealias EntitlementRevocation = ([String]) -> Void
+
 public typealias ShouldAddStorePaymentHandler = (_ payment: SKPayment, _ product: SKProduct) -> Bool
 
 public typealias UpdatedDownloadsHandler = (_ downloads: [SKDownload]) -> Void
@@ -83,6 +85,7 @@ public protocol AppPurchase{
     var updatedDownloadsHandler: UpdatedDownloadsHandler? {set get}
     func startPayment(_ payment: Payment)
     func restorePurchases(_ restorePurchases: RestorePurchases)
+    func onEntitlementRevocation(_ revocation: @escaping EntitlementRevocation) 
     func completeTransactions(_ completeTransactions: CompletePruchase)
     func finishTransaction(_ transaction: SKPaymentTransaction)
     func start(_ downloads: [SKDownload])
