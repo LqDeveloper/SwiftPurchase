@@ -11,7 +11,7 @@ import StoreKit
 extension SwiftPurchase:ReactiveCompatible{}
 //获取产品
 public extension Reactive where Base == SwiftPurchase{
-    static func requestInfoWithSingle(_ productIds: [String]) -> Single<ProductInfo>{
+    static func requestInfo(_ productIds: [String]) -> Single<ProductInfo>{
         return Single.create { (single) -> Disposable in
             Base.requestProductsInfo(productIds) { (result) in
                 switch result{
@@ -30,7 +30,7 @@ public extension Reactive where Base == SwiftPurchase{
 
 //刷新和获取Receipt
 public extension Reactive where Base == SwiftPurchase {
-    static func fetchReceiptWithSingle(forceRefresh: Bool = false) -> Single<Data?>{
+    static func fetchReceipt(forceRefresh: Bool = false) -> Single<Data?>{
         return Single.create { (single) -> Disposable in
             Base.fetchReceipt(forceRefresh: forceRefresh) { (result) in
                 switch result{
@@ -46,7 +46,7 @@ public extension Reactive where Base == SwiftPurchase {
         }
     }
     
-    static func verifyReceiptWithSingle(verifyType:VerifyReceiptType = .production,sharedSecret: String? = nil,excludeOldTransactions:Bool = false,receiptData: Data) -> Single<ReceiptInfo>{
+    static func verifyReceipt(verifyType:VerifyReceiptType = .production,sharedSecret: String? = nil,excludeOldTransactions:Bool = false,receiptData: Data) -> Single<ReceiptInfo>{
         return Single.create { (single) -> Disposable in
             let task = Base.verifyReceipt(verifyType: verifyType, sharedSecret: sharedSecret, excludeOldTransactions: excludeOldTransactions, receiptData: receiptData) { (result) in
                 switch result{
@@ -67,7 +67,7 @@ public extension Reactive where Base == SwiftPurchase {
 
 //购买
 public extension Reactive where Base == SwiftPurchase {
-    static func purchaseWithSingle( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false,paymentDiscount: PaymentDiscount? = nil) -> Single<PaymentInfo>{
+    static func purchase( product: SKProduct, quantity: Int = 1, atomically: Bool = false, applicationUsername: String = "", simulatesAskToBuyInSandbox: Bool = false,paymentDiscount: PaymentDiscount? = nil) -> Single<PaymentInfo>{
         return Single.create { (single) -> Disposable in
             Base.purchase(product, quantity: quantity, atomically: atomically, applicationUsername: applicationUsername, simulatesAskToBuyInSandbox: simulatesAskToBuyInSandbox,paymentDiscount:paymentDiscount) { (result) in
                 switch result{
@@ -85,7 +85,7 @@ public extension Reactive where Base == SwiftPurchase {
 
 //恢复
 public extension Reactive where Base == SwiftPurchase {
-    static func restoreWithSingle(atomically: Bool = true, applicationUsername: String = "") -> Single<[RestoreResult]>{
+    static func restore(atomically: Bool = true, applicationUsername: String = "") -> Single<[RestoreResult]>{
         return Single.create { (single) -> Disposable in
             Base.restorePurchases(atomically: atomically, applicationUsername: applicationUsername) { (result) in
                 single(.success(result))
@@ -98,7 +98,7 @@ public extension Reactive where Base == SwiftPurchase {
 
 //完成
 public extension Reactive where Base == SwiftPurchase {
-    static func completeWithSingle(atomically: Bool = true) -> Single<[Purchase]>{
+    static func complete(atomically: Bool = true) -> Single<[Purchase]>{
         return Single.create { (single) -> Disposable in
             Base.completeTransactions(atomically: atomically) { (result) in
                 single(.success(result))
@@ -111,7 +111,7 @@ public extension Reactive where Base == SwiftPurchase {
 
 public extension Reactive where Base == SwiftPurchase {
     @available(iOS 14, tvOS 14, OSX 11, watchOS 7, macCatalyst 14, *)
-    static func entitlementRevocationWithSingle() -> Single<[String]>{
+    static func entitlementRevocation() -> Single<[String]>{
         return Single.create { (single) -> Disposable in
             Base.onEntitlementRevocation { productIds in
                 single(.success(productIds))
